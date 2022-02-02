@@ -46,7 +46,7 @@ metadata:
   labels:
     purpose: poi-env
 spec:
-  Containers:
+  containers:
   - name: poi-deployment
     image: registrypiw5325.azurecr.io/poi:2
     env:
