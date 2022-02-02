@@ -13,3 +13,7 @@ kubectl expose deployments/userprofile-deployment
 
 kubectl get svc poi-deployment
 kubectl describe svc poi-deployment
+
+View Env variable for Pod:
+
+kubectl exec tripviewer-env -- printenv
