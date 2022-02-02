@@ -19,6 +19,9 @@ spec:
           image: 'registrypiw5325.azurecr.io/user-java:v1'
           ports:
             - containerPort: 8083
+          envFrom:
+            - secretRef:
+              name: sql
 ---
 apiVersion: v1
 kind: Service
