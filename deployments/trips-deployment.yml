@@ -19,3 +19,16 @@ spec:
           image: 'registrypiw5325.azurecr.io/trips:2'
           ports:
             - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trips-deployment
+  labels:
+    run: trips
+spec:
+  ports:
+  - port: 8081
+    protocol: TCP
+  selector:
+    run: trips
