@@ -22,3 +22,22 @@ spec:
         envFrom:
           - secretRef:
               name: sql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: poi
+  labels:
+    app: poi
+spec:
+  ports:
+  - port: 80
+    targetPort: 8081
+    protocol: TCP
+    name: poi-http
+  - port: 443
+    targetPort: 8081
+    protocol: TCP
+    name: poi-https
+  selector:
+    app: poi
