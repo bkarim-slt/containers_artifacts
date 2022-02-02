@@ -36,3 +36,5 @@ spec:
     port: 443
     name: userjava-https
     targetPort: 8083
+  selector:
+      app: user-java
