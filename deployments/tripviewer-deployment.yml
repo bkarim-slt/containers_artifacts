@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: tripviewer
   labels:
-    run: tripviewer
+    app: tripviewer
 spec:
   ports:
   - port: 8081
     protocol: TCP
   selector:
-    run: tripviewer
+    app: tripviewer
