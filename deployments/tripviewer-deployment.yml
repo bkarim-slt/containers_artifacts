@@ -15,7 +15,7 @@ spec:
         app: tripviewer
     spec:
       containers:
-        - name: trips
+        - name: tripviewer2
           image: 'registrypiw5325.azurecr.io/tripviewer2:1.0'
           ports:
             - containerPort: 8081
