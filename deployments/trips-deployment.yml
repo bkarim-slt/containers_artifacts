@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: trips
-          image: 'trips:2'
+          image: 'registrypiw5325.azurecr.io/trips:2'
           ports:
             - containerPort: 8081
