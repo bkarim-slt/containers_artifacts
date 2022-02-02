@@ -38,3 +38,19 @@ spec:
     targetPort: 8081
   selector:
     app: tripviewer
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tripviewer-env
+  labels:
+    purpose: tripviewer-envars
+spec:
+  containers:
+  - name: tripviewer2
+    image: 'registrypiw5325.azurecr.io/tripviewer2:1.0'
+    env:
+    - name: USERPROFILE_API_ENDPOINT
+      value: "http://10.0.50.201:80"
+    - name: TRIPS_API_ENDPOINT
+      value: "http://10.0.189.78:80"
