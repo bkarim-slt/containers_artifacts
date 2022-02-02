@@ -19,7 +19,6 @@ spec:
         image: registrypiw5325.azurecr.io/poi:2
         ports:
         - containerPort: 8081
----
 envFrom:
   - secretRef:
       name: sql
