@@ -36,5 +36,5 @@ spec:
     port: 443
     name: trips-https
     targetPort: 8081
-selector:
+  selector:
     app: trips
