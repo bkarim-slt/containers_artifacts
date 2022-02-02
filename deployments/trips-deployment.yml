@@ -23,12 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: trips-deployment
+  name: trips
   labels:
-    run: trips
+    app: trips
 spec:
   ports:
   - port: 8081
     protocol: TCP
   selector:
-    run: trips
+    app: trips
