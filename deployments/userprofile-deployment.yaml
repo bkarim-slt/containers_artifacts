@@ -23,12 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: userprofile-deployment
+  name: userprofile
   labels:
-    run: userprofile
+    app: userprofile
 spec:
   ports:
   - port: 8081
     protocol: TCP
   selector:
-    run: userprofile
+    app: userprofile

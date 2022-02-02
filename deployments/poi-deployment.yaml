@@ -23,13 +23,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: poi-deployment
+  name: poi
   labels:
-    run: poi
+    app: poi
 spec:
   ports:
   - port: 8081
     protocol: TCP
   selector:
-    run: poi
+    app: poi
     
