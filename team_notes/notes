@@ -10,3 +10,5 @@ Create a Service;
 
 kubectl expose deployments/poi-deployment
 kubectl expose deployments/userprofile-deployment
+
+kubectl describe svc poi-deployment
