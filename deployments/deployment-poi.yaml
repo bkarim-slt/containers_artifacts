@@ -19,3 +19,15 @@ spec:
         image: registrypiw5325.azurecr.io/poi:2
         ports:
         - containerPort: 8081
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: poi-deployment
+  labels:
+    run: poi
+spec:
+  ports:
+  - ports: 8081
+  selector:
+    run: poi
