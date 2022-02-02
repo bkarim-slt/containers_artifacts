@@ -38,4 +38,31 @@ spec:
     name: poi-https
   selector:
     app: poi
-    
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poi
+  labels:
+    purpose: poi-env
+spec:
+  Containers:
+  - name: poi-deployment
+    image: registrypiw5325.azurecr.io/poi:2
+    env:
+#    - name: WEB_SERVER_BASE_URI
+#      value: ""
+#    - name: WEB_PORT
+#      value: "80"
+#    - name: CONFIG_FILES_PATH
+#      value: ""
+    - name: SQL_USER
+      value: "sqladminpIw5325"
+    - name: SQL_PASSWORD
+      value: "iN3ls5My6"
+    - name: SQL_SERVER
+      value: "sqlserverpiw5325"
+    - name: SQL_DBNAME
+      value: ""
+#    - name: ASPNETCORE_ENVIRONMENT
+#      value: ""
