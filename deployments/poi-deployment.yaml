@@ -42,12 +42,12 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: poi
+  name: poi-env
   labels:
-    purpose: poi-env
+    purpose: poi-envars
 spec:
-  Containers:
-  - name: poi-deployment
+  containers:
+  - name: poi
     image: registrypiw5325.azurecr.io/poi:2
     env:
 #    - name: WEB_SERVER_BASE_URI
