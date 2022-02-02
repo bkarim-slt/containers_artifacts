@@ -1,0 +1,12 @@
+Build
+docker build -t poi:2 -f ../../dockerfiles/Dockerfile_3 .
+
+Update AKS with ACR Integration:
+
+bobbykarim@192 ~ % az aks update -n teamAKS -g teamResources --attach-acr registrypiw5325
+
+
+Create a Service;
+
+kubectl expose deployments/poi-deployment
+kubectl expose deployments/userprofile-deployment
