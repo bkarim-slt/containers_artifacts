@@ -28,11 +28,13 @@ metadata:
     app: trips
 spec:
   ports:
-  - port: 80
-    protocol: TCP
-    targetport: 8080
-  - port: 443
-    protocol: TCP
-    targetport: 443
-  selector:
+  - protocol: TCP
+    port: 80
+    name: trips-http
+    targetPort: 8081
+  - protocol: TCP
+    port: 443
+    name: trips-https
+    targetPort: 8081
+selector:
     app: trips
