@@ -1,0 +1,3 @@
+Update AKS with ACR Integration:
+
+bobbykarim@192 ~ % az aks update -n teamAKS -g teamResources --attach-acr registrypiw5325
