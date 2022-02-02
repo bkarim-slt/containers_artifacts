@@ -25,10 +25,16 @@ kind: Service
 metadata:
   name: tripviewer
   labels:
-    run: tripviewer
+    app: tripviewer
 spec:
   ports:
-  - port: 8081
-    protocol: TCP
+  - protocol: TCP
+    port: 80
+    name: tripviewer-http
+    targetPort: 8081
+  - protocol: TCP
+    port: 443
+    name: tripviewer-https
+    targetPort: 8081
   selector:
-    run: tripviewer
+    app: tripviewer
