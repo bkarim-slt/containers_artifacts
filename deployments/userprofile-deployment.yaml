@@ -19,6 +19,9 @@ spec:
         image: registrypiw5325.azurecr.io/userprofile:2
         ports:
         - containerPort: 8081
+        envFrom:
+          - secretRef:
+              name: sql
 ---
 apiVersion: v1
 kind: Service
@@ -36,8 +39,5 @@ spec:
     targetPort: 8081
     protocol: TCP
     name: poi-https
-    envFrom:
-      - secretRef:
-          name: sql
   selector:
     app: userprofile
