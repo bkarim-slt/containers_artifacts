@@ -28,7 +28,8 @@ metadata:
     run: poi
 spec:
   ports:
-  - ports: 8081
+  - port: 8081
+    protocol: TCP
   selector:
     run: poi
     
