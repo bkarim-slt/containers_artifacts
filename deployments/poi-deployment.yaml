@@ -63,6 +63,6 @@ spec:
     - name: SQL_SERVER
       value: "sqlserverpiw5325"
     - name: SQL_DBNAME
-      value: ""
+      value: "sqlserverpiw5325/mydrivingDB"
 #    - name: ASPNETCORE_ENVIRONMENT
 #      value: ""
