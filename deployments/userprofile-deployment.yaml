@@ -36,5 +36,8 @@ spec:
     targetPort: 8081
     protocol: TCP
     name: poi-https
+    envFrom:
+      - secretRef:
+          name: sql
   selector:
     app: userprofile

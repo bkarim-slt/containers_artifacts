@@ -39,5 +39,8 @@ spec:
     port: 443
     name: userjava-https
     targetPort: 8083
+    envFrom:
+      - secretRef:
+          name: sql
   selector:
       app: user-java
