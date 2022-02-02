@@ -31,3 +31,4 @@ spec:
   - ports: 8081
   selector:
     run: poi
+    
