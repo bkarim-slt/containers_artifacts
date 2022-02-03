@@ -19,6 +19,9 @@ spec:
           image: 'registrypiw5325.azurecr.io/trips:2'
           ports:
             - containerPort: 80
+          envFrom:
+            - secretRef:
+                name: sql
 ---
 apiVersion: v1
 kind: Service
