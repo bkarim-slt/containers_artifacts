@@ -35,6 +35,6 @@ spec:
   - protocol: TCP
     port: 443
     name: trips-https
-    targetPort: 8081
+    targetPort: 80
   selector:
     app: trips
