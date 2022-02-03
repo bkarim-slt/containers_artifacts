@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: user-java
-          image: 'registrypiw5325.azurecr.io/user-java:v1'
+          image: 'registrypiw5325.azurecr.io/user-java:v2'
           ports:
             - containerPort: 80
           envFrom:
