@@ -34,10 +34,10 @@ spec:
   - protocol: TCP
     port: 80
     name: userjava-http
-    targetPort: 8083
+    targetPort: 80
   - protocol: TCP
     port: 443
     name: userjava-https
-    targetPort: 8083
+    targetPort: 80
   selector:
       app: user-java
