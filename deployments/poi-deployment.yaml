@@ -22,6 +22,9 @@ spec:
         envFrom:
           - secretRef:
               name: sql
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
 ---
 apiVersion: v1
 kind: Service
@@ -41,17 +44,3 @@ spec:
     name: poi-https
   selector:
     app: poi
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: poi-env
-  labels:
-    purpose: poi-envars
-spec:
-  containers:
-  - name: poi
-    image: registrypiw5325.azurecr.io/poi:2
-    env:
-    - name: ASPNETCORE_ENVIRONMENT
-      value: "Production"
