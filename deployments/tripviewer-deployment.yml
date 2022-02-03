@@ -31,11 +31,11 @@ spec:
   - protocol: TCP
     port: 80
     name: tripviewer-http
-    targetPort: 8081
+    targetPort: 80
   - protocol: TCP
     port: 443
     name: tripviewer-https
-    targetPort: 8081
+    targetPort: 80
   selector:
     app: tripviewer
 ---
