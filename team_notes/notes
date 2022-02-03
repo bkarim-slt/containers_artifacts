@@ -21,10 +21,10 @@ kubectl exec tripviewer-env -- printenv
 Create base64
 https://www.base64encode.org/
 
-SQL Server: sqlserverpiw5325.database.windows.net    -   c3Fsc2VydmVycGl3NTMyNQ==
-SQL Server Username: sqladminpIw5325    -   c3FsYWRtaW5wSXc1MzI1
-SQL Server Password: iN3ls5My6 - aU4zbHM1TXk2
-sqlserverpiw5325/mydrivingDB    -    c3Fsc2VydmVycGl3NTMyNS9teWRyaXZpbmdEQg==
+  SQL_USER: c3FsYWRtaW5wbHc1MzI1
+  SQL_PASSWORD: aU4zbHM1TXk2
+  SQL_SERVER: c3Fsc2VydmVycGl3NTMyNS5kYXRhYmFzZS53aW5kb3dzLm5ldCA=
+  SQL_DBNAME: bXlkcml2aW5nREI=
 
 
 
