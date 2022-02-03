@@ -25,3 +25,7 @@ SQL Server: sqlserverpiw5325    -   c3Fsc2VydmVycGl3NTMyNQ==
 SQL Server Username: sqladminpIw5325    -   c3FsYWRtaW5wSXc1MzI1
 SQL Server Password: iN3ls5My6 - aU4zbHM1TXk2
 sqlserverpiw5325/mydrivingDB    -    c3Fsc2VydmVycGl3NTMyNS9teWRyaXZpbmdEQg==
+
+
+
+kubectl get deployments
