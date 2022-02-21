@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userjava-deployment
+  labels:
+    app: user-java
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-java
+  template:
+    metadata:
+      labels:
+        app: user-java
+    spec:
+      containers:
+        - name: user-java
+          image: 'registrypiw5325.azurecr.io/user-java:v2'
+          ports:
+            - containerPort: 80
+          envFrom:
+            - secretRef:
+               name: sql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: userjava
+  labels:
+    app: user-java
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    name: userjava-http
+    targetPort: 80
+  - protocol: TCP
+    port: 443
+    name: userjava-https
+    targetPort: 80
+  selector:
+      app: user-java

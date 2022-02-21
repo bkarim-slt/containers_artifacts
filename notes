@@ -1,0 +1,5 @@
+Browse to directory src\solution;
+..\containers_artifacts\src\poi>
+
+reun docker build cmd;
+docker build -t poi:2 -f ../../dockerfiles/Dockerfile_3 .

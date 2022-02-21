@@ -1,0 +1,31 @@
+Build
+docker build -t poi:2 -f ../../dockerfiles/Dockerfile_3 .
+
+Update AKS with ACR Integration:
+
+bobbykarim@192 ~ % az aks update -n teamAKS -g teamResources --attach-acr registrypiw5325
+
+
+Create a Service;
+
+kubectl expose deployments/poi-deployment
+kubectl expose deployments/userprofile-deployment
+
+kubectl get svc poi-deployment
+kubectl describe svc poi-deployment
+
+View Env variable for Pod:
+
+kubectl exec tripviewer-env -- printenv
+
+Create base64
+https://www.base64encode.org/
+
+  SQL_USER: c3FsYWRtaW5wbHc1MzI1
+  SQL_PASSWORD: aU4zbHM1TXk2
+  SQL_SERVER: c3Fsc2VydmVycGl3NTMyNS5kYXRhYmFzZS53aW5kb3dzLm5ldCA=
+  SQL_DBNAME: bXlkcml2aW5nREI=
+
+
+
+kubectl get deployments
